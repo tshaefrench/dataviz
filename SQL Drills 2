@@ -1,0 +1,32 @@
+Max Temperature and Where
+SELECT 
+	max(MaxTemperatureF),
+	zip
+FROM 
+	weather
+  
+How Many Trips from Each Station
+SELECT 
+	COUNT(trip_id),
+	start_station
+FROM
+	trips
+GROUP BY
+start_station
+
+Shortest Trip
+SELECT 
+	MIN(duration),
+	start_station
+FROM
+	trips
+;
+
+What is the average trip duration, by end station?
+SELECT 
+	AVG(duration),
+	end_station
+FROM
+	trips
+GROUP BY
+	end_station;
