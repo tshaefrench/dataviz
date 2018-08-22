@@ -1,0 +1,37 @@
+Most Expensive Listing:
+SELECT 
+	id,
+	MAX(price),
+	weekly_price,
+  beds,
+  accommodates,
+  neighborhood,
+  amenities
+FROM 
+	listings;
+  
+Popular Neighborhoods to Go to in Prague:
+SELECT 
+	AVG(avail_365),
+	COUNT(id),
+	neighborhood
+FROM 
+	listings
+GROUP BY 
+	neighborhood
+ORDER BY
+	AVG(avail_365) ASC;
+Time To Visit by Price: 
+SELECT 
+	dates,
+	available,
+	AVG(price),
+	listing_id
+FROM 	
+	calendar 
+WHERE 
+	available = 't'
+GROUP BY
+	listing_id
+ORDER BY 
+	AVG(price) ASC;
