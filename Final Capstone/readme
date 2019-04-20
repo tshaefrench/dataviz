@@ -1,0 +1,20 @@
+Hi there! 
+
+Thanks for taking a look at my Thinkful Final Capstone. I sought to examine the disparity in employment in AI jobs, based upon
+a report from the World Economic Forum (https://www.weforum.org/agenda/2019/01/ai-artificial-intelligence-failing-next-generation-women-bias/).
+If you'd like a quick overview, please take a look at my slides "Final Presentation".  This will give you the 10,000 foot view. 
+
+However, if you're interested in the code you may want to consider the following as you dig in.
+
+I first scraped data (ethically, you'll always want to make sure you're respectful of the websites and servers you're
+scraping from) from Indeed.  The Beautiful Soup files iteratively went through nearly 1,000 job postings and scraped the title,
+job description, and labelled it for me. Then, I used the Pony files as an ORM to store it in a SQLite database. From there,
+I analyzed the data with supervised and unsupervised techniques. You can see this in the Final Capstone NLP file.  From there
+I projected new job descriptions into the LDA space, and ran some metrics to understand their distance from one another. In 
+short, the resutls were surprising.  I used a male dominated field, a female dominated field, and a balanced one. Contrary to
+my hypothesis, I found that the balanced job description was most unlike the male job description, and the female job description
+was most like the balanced job description.  This shows that for fields with a heavy male skew, their job descriptions are 
+different from the balanced and female fields, and may want to consider mindful language to get a more balanced pool of 
+applicants.
+
+Happy reading!
